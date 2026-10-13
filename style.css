@@ -1,0 +1,448 @@
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   NAVIGATION BAR
+   ===================================================== */
+
+.navbar {
+  height: 70px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #172033;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #315efb;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 22px;
+}
+
+.navbar nav a {
+  color: #465064;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #315efb;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =====================================================
+   HOME PAGE
+   ===================================================== */
+
+.hero {
+  min-height: 620px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  padding: 70px 10%;
+
+  background: linear-gradient(135deg, #eef3ff, #ffffff);
+}
+
+.eyebrow {
+  color: #315efb;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #315efb;
+}
+
+.lead {
+  max-width: 650px;
+  font-size: 19px;
+  color: #596579;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* =====================================================
+   PROFILE PHOTO
+   ===================================================== */
+
+.profile-card {
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 35px rgba(27, 43, 75, 0.12);
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 6px solid #315efb;
+
+  box-shadow: 0 8px 25px rgba(49, 94, 251, 0.25);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.profile-card h2 {
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.btn {
+  display: inline-block;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #315efb;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(49, 94, 251, 0.25);
+}
+
+.btn.secondary {
+  background: #e9edff;
+  color: #315efb;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+.section {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 70px 25px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.section p {
+  color: #596579;
+  margin-bottom: 12px;
+}
+
+/* =====================================================
+   COMMON CONTAINER
+   ===================================================== */
+
+.container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 70px 25px;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+  background: #172033;
+  color: white;
+  padding: 18px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: #315efb;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ==============================
+   PAGE HEADER
+   ============================== */
+
+.page-header {
+  text-align: center;
+  padding: 45px 20px 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #172033;
+}
+
+.page-header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 17px;
+}
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 20px auto 100px;
+}
+
+/* ==============================
+   CARD
+   ============================== */
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #172033;
+}
+
+/* ==============================
+   TABLE
+   ============================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 17px 15px;
+  border-bottom: 1px solid #e1e5eb;
+}
+
+table td:first-child {
+  width: 30%;
+  color: #172033;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+  background: #172033;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu a {
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  table td {
+    padding: 12px 8px;
+  }
+
+  table td:first-child {
+    width: 35%;
+  }
+}
+
+/* =====================================================
+   PRINT
+   ===================================================== */
+
+@media print {
+  .navbar,
+  footer,
+  .btn {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .card {
+    box-shadow: none;
+
+    border: 1px solid #ddd;
+  }
+}
